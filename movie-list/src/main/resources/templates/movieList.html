@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Movie List</title>
+<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap.min.css"
+      th:href="@{/webjars/bootstrap/2.3.0/css/bootstrap.min.css}" rel="stylesheet" />
+</head>
+<body>
+<h2>Movie List </h2>
+<table border=1 class="table table-striped">
+  <thead>
+    <tr>
+      <th>Movie Name</th>
+      <th>Movie Description</th>
+      <th>Actor Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="movie : ${movies}">     
+      <td th:text="${movie.name}"></td>
+      <td th:text="${movie.description}"></td>
+      <td th:text="${movie.actor}"></td>     
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
